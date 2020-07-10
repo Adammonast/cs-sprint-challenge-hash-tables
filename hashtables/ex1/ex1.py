@@ -11,7 +11,7 @@ def get_indices_of_item_weights(weights, length, limit):
     # each element represents the item weights of the two packages
     # The higher valued index should be placed in the `zeroth` index and the smaller index should be placed in the `first` index
     # If such a pair doesn’t exist: function should return `None`.
-    # linear time - as input increases, runtime/space used will grow at the SAME rate
+    # linear time - as input increases, runtime/space used will grow at the SAME rate --> O(n)
 
     # check the length first ---> return None
     if length <= 1:
@@ -22,7 +22,8 @@ def get_indices_of_item_weights(weights, length, limit):
         if weights[0] == weights[1] and weights[0] + weights[1] == limit:
             return (1, 0)
 
-    # convert weights to dict
+    # use enumerate for an iterable enumerate object ---> each iteration will create a tuple containing an index and value
+    # convert weights to dict (use dict comprehension)
     weights_dict = {n: idx for idx, n in enumerate(weights)}
 
     # loop through weights
