@@ -13,6 +13,29 @@ def get_indices_of_item_weights(weights, length, limit):
     # If such a pair doesn’t exist: function should return `None`.
     # linear time - as input increases, runtime/space used will grow at the SAME rate
 
-    # check the length first
+    # check the length first ---> return None
+    if length <= 1:
+        return None
+
+    # instance were weights has two numbers that are the SAME
+    if length == 2:
+        if weights[0] == weights[1] and weights[0] + weights[1] == limit:
+            return (1, 0)
+
+    # convert weights to dict
+    weights_dict = {n: idx for idx, n in enumerate(weights)}
+
+    # loop through weights
+    for w in weights:
+        # if the limit minus the current weight is in the dict,
+        if (limit - w) in weights_dict:
+            # get index of current weight
+            current_idx = weights_dict[w]
+            # get index of limit minus the current weight
+            sub_idx = weights_dict[limit-w]
+            # figure out which one is the larger index
+            largest = current_idx if current_idx > sub_idx else sub_idx
+            smallest = current_idx if current_idx < sub_idx else sub_idx
+            return (largest, smallest)
 
     return None
