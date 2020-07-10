@@ -13,6 +13,15 @@ def get_indices_of_item_weights(weights, length, limit):
     # If such a pair doesn’t exist: function should return `None`.
     # linear time - as input increases, runtime/space used will grow at the SAME rate --> O(n)
 
+    # todo:
+    # check if the length is greater/equal to 1 (if it doesn't have more than one number, we return none)
+    # check if the weights numbers are the same, return in the proper order
+    # convert weights list to dict
+    # iterate over the weights
+    # check if the limit - the weight is within the dictionary
+    # get the current index to compare to the index of limit - curret weight
+    # evaluate values and return them sorted appropriately ---> (greater, smaller)
+
     # check the length first ---> return None
     if length <= 1:
         return None
