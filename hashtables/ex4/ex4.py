@@ -4,13 +4,14 @@ def has_negatives(a):
     """
     # Your code here
 
-    # todo
+    # breakdown:
     # for an input of numbers, find which postive numbers have corresponding negative numbers
     # input: [ 1, -1, 2, 3, -4, -3, 4, -5, 6, 7 ] ---> [ 1, 3, 4 ]
     # unsorted input
     # return value can also be unsorted
     # limit = approximately 5,000,000 elements
 
+    # todo:
     # put negative values in data structure
     # figure out what data structure to use
     # convert list ---> dict (faster lookup)

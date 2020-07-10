@@ -4,7 +4,7 @@ def get_indices_of_item_weights(weights, length, limit):
     """
     # Your code here
 
-    # todo:
+    # breakdown:
     # given a package with a weight limit `limit` and a list `weights` of item weights
     # implement function that finds two items whose SUM of weight EQUALS the weight limit
     # function returns a tuple of integers ---> (zero, one)
